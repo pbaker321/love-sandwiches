@@ -10,7 +10,7 @@ SCOPE = [
 CREDS = Credentials.from_service_account_file("creds.json")
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENTS = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENTS.open("love_sandwiches") 
+SHEET = GSPREAD_CLIENTS.open("love_sandwiches")
 
 
 def get_sales_data():
@@ -24,4 +24,5 @@ def get_sales_data():
     data_str = input("Enter you data here: ")
     print(f"The provided is {data_str}")
 
-get_sales_data()    
+
+get_sales_data()
